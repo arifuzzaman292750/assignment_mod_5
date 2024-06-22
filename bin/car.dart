@@ -5,7 +5,11 @@ class Car {
   late double milesDriven;
   static int numberOfCars = 0;
 
-  Car(this.brand, this.model, this.year,) {
+  Car({
+    required this.brand,
+    required this.model,
+    required this.year,
+  }) {
     milesDriven = 0;
     numberOfCars++;
   }
@@ -37,7 +41,7 @@ class Car {
 }
 
 void main() {
-  Car car1 = Car('Toyota', 'Corolla', 2016);
+  Car car1 = Car(brand: 'Toyota' , model: 'Corolla', year: 2016); //('Toyota', 'Corolla', 2016);
   print('Car1 brand: ${car1.getBrand()}');
   print('Car1 model: ${car1.getModel()}');
   print('Car1 year: ${car1.getYear()}');
@@ -45,7 +49,7 @@ void main() {
   print('Miles driven by Car1: ${car1.getMilesDriven()}');
   print('Car1 age: ${car1.getAge()}');
 
-  Car car2 = Car('Ford', 'Porsche', 2017);
+  Car car2 = Car(brand: 'Ford', model: 'Porsche', year: 2017); //('Ford', 'Porsche', 2017);
   print('Car2 brand: ${car2.getBrand()}');
   print('Car2 model: ${car2.getModel()}');
   print('Car2 year: ${car2.getYear()}');
@@ -53,7 +57,7 @@ void main() {
   print('Miles driven by Car2: ${car2.getMilesDriven()}');
   print('Car2 age: ${car2.getAge()}');
 
-  Car car3 = Car('Nissan', 'Kicks', 2018);
+  Car car3 = Car(brand: 'Nissan', model: 'Kicks', year: 2018); //('Nissan', 'Kicks', 2018);
   print('Car3 brand: ${car3.getBrand()}');
   print('Car3 model: ${car3.getModel()}');
   print('Car3 year: ${car3.getYear()}');
